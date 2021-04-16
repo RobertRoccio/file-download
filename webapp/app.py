@@ -6,7 +6,7 @@ app = Flask(__name__)
 def downloadFile ():
     path = "test_file.zip"
     #return send_file(path, as_attachment=True)
-    return send_file(path, mimetype="application/zip")
+    return send_file(path, as_attachment=True, attachment_filename="jojo.png", mimetype="application/zip")
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
